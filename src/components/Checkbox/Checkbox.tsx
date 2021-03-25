@@ -1,13 +1,7 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
-import CheckboxAndroid, {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  CheckboxAndroid as _CheckboxAndroid,
-} from './CheckboxAndroid';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import CheckboxIOS, { CheckboxIOS as _CheckboxIOS } from './CheckboxIOS';
-import { withTheme } from '../core/theming';
-import { Theme } from '../types';
+import { CheckboxIOS, CheckboxItem, CheckboxAndroid } from './CheckboxElements';
+import { withTheme } from '../../core/theming';
 
 type Props = {
   /**
@@ -33,7 +27,11 @@ type Props = {
   /**
    * @optional
    */
-  theme: Theme;
+  theme: ReactNativePaper.Theme;
+  /**
+   * testID to be used on tests.
+   */
+  testID?: string;
 };
 
 /**
@@ -63,37 +61,41 @@ type Props = {
  * import * as React from 'react';
  * import { Checkbox } from 'react-native-paper';
  *
- * export default class MyComponent extends React.Component {
- *   state = {
- *     checked: false,
- *   };
+ * const MyComponent = () => {
+ *   const [checked, setChecked] = React.useState(false);
  *
- *   render() {
- *     const { checked } = this.state;
- *     return (
- *       <Checkbox
- *         status={checked ? 'checked' : 'unchecked'}
- *         onPress={() => { this.setState({ checked: !checked }); }}
- *       />
- *     );
- *   }
- * }
+ *   return (
+ *     <Checkbox
+ *       status={checked ? 'checked' : 'unchecked'}
+ *       onPress={() => {
+ *         setChecked(!checked);
+ *       }}
+ *     />
+ *   );
+ * };
+ *
+ * export default MyComponent;
  * ```
  */
-class Checkbox extends React.Component<Props> {
-  // @component ./CheckboxAndroid.tsx
-  static Android = CheckboxAndroid;
+const Checkbox = (props: Props) =>
+  Platform.OS === 'ios' ? (
+    <CheckboxIOS {...props} />
+  ) : (
+    <CheckboxAndroid {...props} />
+  );
 
-  // @component ./CheckboxIOS.tsx
-  static IOS = CheckboxIOS;
+// @component ./CheckboxItem.tsx
+Checkbox.Item = CheckboxItem;
 
-  render() {
-    return Platform.OS === 'ios' ? (
-      <CheckboxIOS {...this.props} />
-    ) : (
-      <CheckboxAndroid {...this.props} />
-    );
-  }
-}
+// @component ./CheckboxAndroid.tsx
+Checkbox.Android = CheckboxAndroid;
+
+// @component ./CheckboxIOS.tsx
+Checkbox.IOS = CheckboxIOS;
 
 export default withTheme(Checkbox);
+
+// @component-docs ignore-next-line
+const CheckboxWithTheme = withTheme(Checkbox);
+// @component-docs ignore-next-line
+export { CheckboxWithTheme as Checkbox };

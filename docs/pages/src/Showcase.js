@@ -3,10 +3,12 @@
 import * as React from 'react';
 import { styled } from 'linaria/react';
 import color from 'color';
+import { Header } from 'component-docs/components';
 
 import GooglePlayIcon from '../../components/google-play-icon';
 import IphoneIcon from '../../components/iphone-icon';
 import Content from './components/Content';
+import GithubIcon from '../../components/github-icon';
 
 type Data = {
   color: string,
@@ -65,12 +67,35 @@ const data: Data[] = [
     android: 'https://play.google.com/store/apps/details?id=in.micy.tracksnz',
     ios: 'https://apps.apple.com/nz/app/tracks-nz/id1488245855',
   },
+  {
+    color: '#b985fc',
+    name: 'Astrale',
+    image: 'showcase/astrale.png',
+    github: 'https://github.com/jvidalv/astrale',
+    android: 'https://play.google.com/store/apps/details?id=josep.astrale',
+  },
+  {
+    color: '#29337a',
+    name: 'Lyra Collect',
+    image: 'showcase/lyracollect.png',
+    android:
+      'https://play.google.com/store/apps/details?id=com.lyra.lyracollect',
+    ios: 'https://apps.apple.com/fr/app/lyra-collect/id1469527737',
+  },
+  {
+    color: '#673AB7',
+    name: 'Rozy - Stay connected',
+    image: 'showcase/rozy.png',
+    ios: 'https://apps.apple.com/us/app/rozy/id1511264722',
+    android: 'https://play.google.com/store/apps/details?id=com.rozy_app.rozy',
+  },
 ];
 
 export default class Showcase extends React.Component<{}> {
   render() {
     return (
       <Container>
+        <Header logo="images/sidebar-logo.svg" />
         <Content>
           <h1>Who&apos;s using Paper?</h1>
           <p>
@@ -85,7 +110,7 @@ export default class Showcase extends React.Component<{}> {
             to add your app to this list.
           </p>
           <Gallery>
-            {data.map(item => {
+            {data.map((item) => {
               const tintColor = color(item.color).isLight()
                 ? '#000000'
                 : '#FFFFFF';
@@ -119,6 +144,15 @@ export default class Showcase extends React.Component<{}> {
                         >
                           <IphoneIcon color={tintColor} />
                         </a>
+                        <Separation />
+                        <a
+                          href={item.github || null}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ opacity: item.github ? 1 : 0.4 }}
+                        >
+                          <GithubIcon color={tintColor} />
+                        </a>
                       </BadgeContainer>
                     </Info>
                   </ImageContainer>
@@ -133,7 +167,7 @@ export default class Showcase extends React.Component<{}> {
 }
 
 const Container = styled.div`
-  width: 100%;
+  flex: 1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 `;

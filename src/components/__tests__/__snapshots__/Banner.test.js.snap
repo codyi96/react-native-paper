@@ -192,10 +192,13 @@ exports[`renders visible banner, with action buttons and with image 1`] = `
         >
           <View
             accessibilityRole="button"
-            accessibilityStates={Array []}
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -228,6 +231,7 @@ exports[`renders visible banner, with action buttons and with image 1`] = `
             >
               <Text
                 numberOfLines={1}
+                selectable={false}
                 style={
                   Array [
                     Object {
@@ -369,10 +373,13 @@ exports[`renders visible banner, with action buttons and without image 1`] = `
         >
           <View
             accessibilityRole="button"
-            accessibilityStates={Array []}
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -405,6 +412,7 @@ exports[`renders visible banner, with action buttons and without image 1`] = `
             >
               <Text
                 numberOfLines={1}
+                selectable={false}
                 style={
                   Array [
                     Object {
@@ -461,10 +469,13 @@ exports[`renders visible banner, with action buttons and without image 1`] = `
         >
           <View
             accessibilityRole="button"
-            accessibilityStates={Array []}
+            accessibilityState={
+              Object {
+                "disabled": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -497,6 +508,7 @@ exports[`renders visible banner, with action buttons and without image 1`] = `
             >
               <Text
                 numberOfLines={1}
+                selectable={false}
                 style={
                   Array [
                     Object {

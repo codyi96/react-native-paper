@@ -1,6 +1,6 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
-import Checkbox from '../Checkbox.tsx';
+import Checkbox from '../../Checkbox/Checkbox';
 
 it('renders checked Checkbox with onPress', () => {
   const tree = renderer
@@ -45,6 +45,14 @@ it('renders unchecked Checkbox with color', () => {
 it('renders indeterminate Checkbox with color', () => {
   const tree = renderer
     .create(<Checkbox status="indeterminate" color="red" />)
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders Checkbox with custom testID', () => {
+  const tree = renderer
+    .create(<Checkbox status="checked" testID={'custom:testID'} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

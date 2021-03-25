@@ -10,15 +10,20 @@ exports[`renders chip with close button 1`] = `
       "borderStyle": "solid",
       "borderWidth": 0.5,
       "elevation": 0,
+      "flexDirection": "row",
     }
   }
 >
   <View
     accessibilityRole="button"
-    accessibilityState={Object {}}
+    accessibilityState={
+      Object {
+        "disabled": false,
+        "selected": false,
+      }
+    }
     accessible={true}
     focusable={false}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -39,17 +44,24 @@ exports[`renders chip with close button 1`] = `
   >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "paddingHorizontal": 4,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "paddingLeft": 4,
+            "position": "relative",
+          },
+          Object {
+            "paddingRight": 32,
+          },
+        ]
       }
     >
       <View
         style={
           Array [
             Object {
+              "alignSelf": "center",
               "padding": 4,
             },
             null,
@@ -69,6 +81,7 @@ exports[`renders chip with close button 1`] = `
               },
               Array [
                 Object {
+                  "lineHeight": 18,
                   "transform": Array [
                     Object {
                       "scaleX": 1,
@@ -93,6 +106,7 @@ exports[`renders chip with close button 1`] = `
       </View>
       <Text
         numberOfLines={1}
+        selectable={false}
         style={
           Array [
             Object {
@@ -113,7 +127,7 @@ exports[`renders chip with close button 1`] = `
                 "fontFamily": "System",
                 "fontWeight": "400",
                 "marginLeft": 4,
-                "marginRight": 4,
+                "marginRight": 0,
               },
               undefined,
             ],
@@ -122,57 +136,78 @@ exports[`renders chip with close button 1`] = `
       >
         Example Chip
       </Text>
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": "100%",
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="Close"
+      accessibilityRole="button"
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
           Object {
+            "alignSelf": "center",
             "padding": 4,
-          }
-        }
-      >
-        <Text
-          accessibilityElementsHidden={true}
-          allowFontScaling={false}
-          importantForAccessibility="no-hide-descendants"
-          pointerEvents="none"
-          style={
+          },
+          Object {
+            "marginRight": 4,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityElementsHidden={true}
+        allowFontScaling={false}
+        importantForAccessibility="no-hide-descendants"
+        pointerEvents="none"
+        style={
+          Array [
+            Object {
+              "color": "rgba(0, 0, 0, 0.54)",
+              "fontSize": 16,
+            },
             Array [
               Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontSize": 16,
+                "lineHeight": 16,
+                "transform": Array [
+                  Object {
+                    "scaleX": 1,
+                  },
+                ],
               },
-              Array [
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scaleX": 1,
-                    },
-                  ],
-                },
-                Object {
-                  "backgroundColor": "transparent",
-                },
-              ],
               Object {
-                "fontFamily": "Material Design Icons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
+                "backgroundColor": "transparent",
               },
-              Object {},
-            ]
-          }
-        >
-          
-        </Text>
-      </View>
+            ],
+            Object {
+              "fontFamily": "Material Design Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
     </View>
   </View>
 </View>
@@ -188,15 +223,20 @@ exports[`renders chip with icon 1`] = `
       "borderStyle": "solid",
       "borderWidth": 0.5,
       "elevation": 0,
+      "flexDirection": "row",
     }
   }
 >
   <View
     accessibilityRole="button"
-    accessibilityState={Object {}}
+    accessibilityState={
+      Object {
+        "disabled": false,
+        "selected": false,
+      }
+    }
     accessible={true}
     focusable={false}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -217,17 +257,24 @@ exports[`renders chip with icon 1`] = `
   >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "paddingHorizontal": 4,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "paddingLeft": 4,
+            "position": "relative",
+          },
+          Object {
+            "paddingRight": 4,
+          },
+        ]
       }
     >
       <View
         style={
           Array [
             Object {
+              "alignSelf": "center",
               "padding": 4,
             },
             null,
@@ -247,6 +294,7 @@ exports[`renders chip with icon 1`] = `
               },
               Array [
                 Object {
+                  "lineHeight": 18,
                   "transform": Array [
                     Object {
                       "scaleX": 1,
@@ -271,6 +319,7 @@ exports[`renders chip with icon 1`] = `
       </View>
       <Text
         numberOfLines={1}
+        selectable={false}
         style={
           Array [
             Object {
@@ -315,15 +364,20 @@ exports[`renders chip with onPress 1`] = `
       "borderStyle": "solid",
       "borderWidth": 0.5,
       "elevation": 0,
+      "flexDirection": "row",
     }
   }
 >
   <View
     accessibilityRole="button"
-    accessibilityState={Object {}}
+    accessibilityState={
+      Object {
+        "disabled": false,
+        "selected": false,
+      }
+    }
     accessible={true}
     focusable={true}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -344,15 +398,22 @@ exports[`renders chip with onPress 1`] = `
   >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "paddingHorizontal": 4,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "paddingLeft": 4,
+            "position": "relative",
+          },
+          Object {
+            "paddingRight": 4,
+          },
+        ]
       }
     >
       <Text
         numberOfLines={1}
+        selectable={false}
         style={
           Array [
             Object {
@@ -397,6 +458,7 @@ exports[`renders outlined disabled chip 1`] = `
       "borderStyle": "solid",
       "borderWidth": 0.5,
       "elevation": 0,
+      "flexDirection": "row",
     }
   }
 >
@@ -405,11 +467,11 @@ exports[`renders outlined disabled chip 1`] = `
     accessibilityState={
       Object {
         "disabled": true,
+        "selected": false,
       }
     }
     accessible={true}
     focusable={false}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -430,15 +492,22 @@ exports[`renders outlined disabled chip 1`] = `
   >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "paddingHorizontal": 4,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "paddingLeft": 4,
+            "position": "relative",
+          },
+          Object {
+            "paddingRight": 4,
+          },
+        ]
       }
     >
       <Text
         numberOfLines={1}
+        selectable={false}
         style={
           Array [
             Object {
@@ -483,6 +552,7 @@ exports[`renders selected chip 1`] = `
       "borderStyle": "solid",
       "borderWidth": 0.5,
       "elevation": 0,
+      "flexDirection": "row",
     }
   }
 >
@@ -490,12 +560,12 @@ exports[`renders selected chip 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
+        "disabled": false,
         "selected": true,
       }
     }
     accessible={true}
     focusable={false}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -516,17 +586,24 @@ exports[`renders selected chip 1`] = `
   >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "paddingHorizontal": 4,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "paddingLeft": 4,
+            "position": "relative",
+          },
+          Object {
+            "paddingRight": 4,
+          },
+        ]
       }
     >
       <View
         style={
           Array [
             Object {
+              "alignSelf": "center",
               "padding": 4,
             },
             null,
@@ -546,6 +623,7 @@ exports[`renders selected chip 1`] = `
               },
               Array [
                 Object {
+                  "lineHeight": 18,
                   "transform": Array [
                     Object {
                       "scaleX": 1,
@@ -570,6 +648,7 @@ exports[`renders selected chip 1`] = `
       </View>
       <Text
         numberOfLines={1}
+        selectable={false}
         style={
           Array [
             Object {
